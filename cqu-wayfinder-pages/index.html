@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8e272b">
+  <meta name="description" content="重庆大学校园无障碍寻路交互原型。以 B 校园第二综合楼为案例，体验个性化路线、动态障碍与可解释建议。">
+  <title>知路 · 重庆大学无障碍寻路原型</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="知路，返回首页"><span class="brand-mark" aria-hidden="true">知</span><span>知路 <small>CQU WAYFINDER</small></span></a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#campuses">校园场景</a><a href="#workspace">路线体验</a><a href="#research">用户测试</a>
+      </nav>
+      <a class="header-cta" href="#workspace">开始规划 <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="重庆大学 B 校园全景照片"></div>
+      <div class="hero-shade"></div>
+      <div class="shell hero-inner">
+        <p class="eyebrow light"><span class="eyebrow-line"></span> HUMAN-CENTERED SPATIAL INTELLIGENCE</p>
+        <h1 id="hero-title">让每一条路，<br><em>都照顾走路的人。</em></h1>
+        <p class="hero-description">从重庆大学 B 校园第二综合楼出发，探索一套可迁移到 A、B、C 校园的无障碍寻路交互模型。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#workspace">体验智能路线 <span aria-hidden="true">↗</span></a><a class="button button-outline" href="#method">了解原型方法</a></div>
+        <div class="hero-foot"><span>01 / 03</span><span>以真实校园为场景 · 楼内动线为示意数据</span></div>
+      </div>
+      <div class="hero-side" aria-hidden="true">CHONGQING UNIVERSITY · ACCESS FOR ALL</div>
+    </section>
+
+    <section class="intro shell" aria-labelledby="intro-title">
+      <div><p class="eyebrow">WHY THIS MATTERS</p><h2 id="intro-title">到达一间教室，<br>不该成为一道难题。</h2></div>
+      <div class="intro-copy"><p>陌生楼宇中的楼梯、绕行、临时封闭和不明确的指引，会让“最短路线”变得并不适合每个人。知路先询问通行需求，再给出能够解释、能够修改的路线建议。</p><div class="principles"><span>以人为中心</span><span>清楚解释</span><span>随时纠正</span></div></div>
+    </section>
+
+    <section class="campus-section" id="campuses" aria-labelledby="campus-title">
+      <div class="shell">
+        <div class="section-head"><div><p class="eyebrow">THREE CAMPUSES · ONE MODEL</p><h2 id="campus-title">从一栋楼，走向整个重大。</h2></div><p>同一套交互模型可替换为不同校园的实测地图和设施数据。当前以 B 校园第二综合楼为重点案例。</p></div>
+        <div class="campus-grid">
+          <button class="campus-card" type="button" data-campus="A" aria-pressed="false"><img src="./assets/campus-a.jpg" alt="重庆大学 A 校园主教学楼周边景观"><span class="campus-overlay"><span class="campus-num">01 / A CAMPUS</span><strong>A 校园</strong><small>主教学楼 · 模板演示</small><span class="campus-arrow" aria-hidden="true">↗</span></span></button>
+          <button class="campus-card active" type="button" data-campus="B" aria-pressed="true"><img src="./assets/campus-b.jpg" alt="重庆大学 B 校园俯瞰景观"><span class="campus-overlay"><span class="campus-num">02 / B CAMPUS</span><strong>B 校园</strong><small>第二综合楼 · 重点案例</small><span class="campus-arrow" aria-hidden="true">↗</span></span></button>
+          <button class="campus-card" type="button" data-campus="C" aria-pressed="false"><img src="./assets/campus-c.jpg" alt="重庆大学 C 校园大门周边俯瞰景观"><span class="campus-overlay"><span class="campus-num">03 / C CAMPUS</span><strong>C 校园</strong><small>第一教学楼 · 模板演示</small><span class="campus-arrow" aria-hidden="true">↗</span></span></button>
+        </div>
+        <p class="image-credit">校园照片来源：<a href="https://www.cqu.edu.cn/zjzd/gyzd/hp_zd/1.htm" target="_blank" rel="noopener noreferrer">重庆大学官网 A/B 校园影像</a>、<a href="https://www.cqu.edu.cn/zjzd/gyzd/hp_zd.htm" target="_blank" rel="noopener noreferrer">C 校园影像</a>。照片用于场景展示，不代表已完成建筑内部实测。</p>
+      </div>
+    </section>
+
+    <section class="workspace-section" id="workspace" aria-labelledby="workspace-title">
+      <div class="shell">
+        <div class="section-head workspace-head"><div><p class="eyebrow">INTERACTIVE PROTOTYPE</p><h2 id="workspace-title">让路线回应你的需要。</h2></div><div class="prototype-stamp"><span class="stamp-dot"></span> 可交互课程原型 <span>·</span> 非实地导航</div></div>
+        <div class="prototype-note"><strong>演示数据说明</strong><span>楼层布局、设施位置、距离与障碍状态是为交互研究构造的示意数据。未经重庆大学现场核验，请勿将本路线用于实际通行或应急疏散。</span></div>
+        <div class="app-grid">
+          <aside class="control-panel" aria-label="路线设置">
+            <div class="panel-title"><span class="step-tag">STEP 01</span><h3>设定你的行程</h3><p id="current-building">B 校园 · 第二综合楼</p></div>
+            <div class="field"><label for="origin">从哪里出发</label><select id="origin"><option value="entrance">一层南入口</option><option value="lobby">一层大厅</option><option value="lift1">一层电梯口</option><option value="stairs1">一层楼梯口</option></select></div>
+            <div class="field"><label for="destination">想到哪里去</label><select id="destination"><option value="room205">二层 205 教室</option><option value="room201">二层 201 教室</option><option value="wc2">二层无障碍卫生间</option><option value="study2">二层自习区</option></select></div>
+            <fieldset class="field mode-field"><legend>你的通行方式</legend><div class="choice-grid"><label class="choice"><input type="radio" name="mobility" value="wheelchair" checked><span><strong>无台阶</strong><small>轮椅 / 助行</small></span></label><label class="choice"><input type="radio" name="mobility" value="walking"><span><strong>步行</strong><small>允许楼梯</small></span></label></div></fieldset>
+            <div class="field"><label for="priority">路线偏好</label><select id="priority"><option value="balanced">平衡距离与通行舒适度</option><option value="shortest">尽量少走路</option><option value="quiet">尽量避开拥挤区域</option></select></div>
+            <button id="plan-button" class="button button-plan" type="button">生成适合我的路线 <span aria-hidden="true">→</span></button>
+          </aside>
+
+          <div class="map-panel">
+            <div class="map-topbar"><div><span class="step-tag">STEP 02</span><h3>空间路线图 <small>交互示意</small></h3></div><div class="floor-tabs" role="tablist" aria-label="查看楼层"><button type="button" role="tab" data-floor="1" aria-selected="true">1F</button><button type="button" role="tab" data-floor="2" aria-selected="false">2F</button></div></div>
+            <div class="map-frame"><svg id="floor-map" viewBox="0 0 780 420" role="img" aria-labelledby="map-title map-desc"><title id="map-title">建筑楼层示意地图</title><desc id="map-desc">显示入口、走廊、电梯、楼梯和目的地的示意位置。路线可随通行方式和临时障碍变化。</desc></svg><div class="map-compass" aria-hidden="true">N ↑</div></div>
+            <div class="map-footer"><span><i class="legend-line"></i> 推荐路线</span><span><i class="legend-dot lift"></i> 电梯</span><span><i class="legend-dot stairs"></i> 楼梯</span><span><i class="legend-dot blocked"></i> 模拟障碍</span><button id="map-reset" type="button">重置场景 ↺</button></div>
+          </div>
+        </div>
+
+        <div class="insight-grid">
+          <section class="scenario-panel" aria-labelledby="scenario-title"><div class="panel-title compact"><span class="step-tag">STEP 03</span><h3 id="scenario-title">改变现场，会发生什么？</h3><p>开关仅模拟场景，不代表设施实时状态。</p></div><label class="toggle-row"><span><strong>模拟电梯停用</strong><small>观察无台阶路线是否仍可达</small></span><input id="lift-closed" type="checkbox" role="switch"><span class="switch-ui" aria-hidden="true"></span></label><label class="toggle-row"><span><strong>模拟中央至东廊通道封闭</strong><small>观察系统如何选择绕行</small></span><input id="east-closed" type="checkbox" role="switch"><span class="switch-ui" aria-hidden="true"></span></label><label class="toggle-row"><span><strong>模拟中央区域拥挤</strong><small>结合“避开拥挤”偏好体验</small></span><input id="crowded" type="checkbox" role="switch"><span class="switch-ui" aria-hidden="true"></span></label></section>
+          <section class="result-panel" aria-labelledby="result-title"><div class="result-header"><span class="step-tag">YOUR ROUTE</span><span id="route-status" class="route-status">路线已就绪</span></div><h3 id="result-title">推荐路线</h3><div id="route-summary" class="route-summary" aria-live="polite"></div><ol id="route-steps" class="route-steps"></ol><details class="explanation" id="explanation"><summary>为什么推荐这条路？<span aria-hidden="true">↗</span></summary><div id="route-explanation"></div></details><button id="alternate-button" class="text-button" type="button">查看另一条可行路线 <span aria-hidden="true">→</span></button></section>
+        </div>
+      </div>
+    </section>
+
+    <section class="method-section" id="method" aria-labelledby="method-title"><div class="shell method-grid"><div><p class="eyebrow">DESIGN LOGIC</p><h2 id="method-title">先理解人，<br>再计算路。</h2></div><div class="method-list"><article><span>01</span><div><h3>收集真实需求</h3><p>主要用户是有无台阶通行需求的学生、教职工与访客；次要用户是陪同者、楼宇管理人员。先问通行能力与目标，再给建议。</p></div></article><article><span>02</span><div><h3>让空间状态进入计算</h3><p>以“节点—通道”图表示楼内空间。路线算法综合距离、楼梯约束、拥挤程度与模拟障碍计算可行路径。</p></div></article><article><span>03</span><div><h3>保持解释和人的控制</h3><p>公开推荐原因与未选路线的限制；用户可修改偏好、切换通行方式、模拟障碍，也可直接停止使用建议。</p></div></article></div></div></section>
+
+    <section class="research-section shell" id="research" aria-labelledby="research-title"><div class="section-head"><div><p class="eyebrow">RESEARCH READY</p><h2 id="research-title">把体验，变成可验证的研究。</h2></div><p>网站内置一套可操作的用户测试流程。由真实参与者完成任务，数据保存在当前浏览器，可导出用于课程分析。</p></div><div class="research-grid"><div class="research-brief"><div class="research-kicker">研究假设 / H1</div><h3>看到路线的解释，会更愿意信任建议吗？</h3><p>比较 A 组“仅看路线”和 B 组“路线 + 推荐解释”的信任评分，同时记录任务完成、耗时和人本评价。</p><div class="metric-list"><span>任务完成</span><span>完成时长</span><span>信任评分</span><span>人本评价</span></div><p class="research-small">课程要求采集不少于 10 名真实最终用户的数据；原型不会自动生成或补造测试记录。</p></div><form id="study-form" class="study-form"><h3>参与一次体验测试</h3><p>任务：选择“无台阶”，从南入口到 205 教室，再模拟中央至东廊通道封闭，找出是否仍有可行路线。测试主持人请为参与者交替指定 A / B 组，先选组再开始任务。</p><div class="study-fields"><label>匿名编号<input id="participant" name="participant" type="text" minlength="2" maxlength="24" placeholder="例如 P01" required></label><label>你的角色<select id="role" name="role"><option value="学生">学生</option><option value="教职工">教职工</option><option value="访客">访客</option><option value="其他">其他</option></select></label><label>实验条件<select id="condition" name="condition"><option value="B">B 组 · 可查看推荐解释</option><option value="A">A 组 · 仅看路线</option></select></label><label>任务是否完成<select id="task-complete" name="taskComplete"><option value="yes">完成</option><option value="no">未完成</option></select></label></div><button id="start-study" class="text-button study-start" type="button">开始测试任务并计时 <span aria-hidden="true">↗</span></button><fieldset><legend>推荐理由是否清楚？ <span>1 很不清楚 · 5 非常清楚</span></legend><div class="rating" data-name="clarity"></div></fieldset><fieldset><legend>你有多信任这条建议？ <span>1 完全不信任 · 5 非常信任</span></legend><div class="rating" data-name="trust"></div></fieldset><fieldset><legend>你能否自主修改或停止建议？ <span>1 很难 · 5 很容易</span></legend><div class="rating" data-name="control"></div></fieldset><label class="comment-label">你最希望改进什么？<textarea id="feedback" name="feedback" rows="2" maxlength="300" placeholder="可选：描述不清楚的路线、设施或交互"></textarea></label><div class="form-actions"><button class="button button-primary" type="submit">保存本次记录 <span aria-hidden="true">→</span></button><button id="export-csv" class="text-button" type="button">导出 CSV <span aria-hidden="true">↓</span></button></div><p id="study-message" class="study-message" role="status" aria-live="polite">当前浏览器已保存 <strong id="record-count">0</strong> 条真实测试记录。</p><p class="privacy-note">仅存于此设备浏览器的本地存储；清理浏览器数据会删除记录。请定期导出 CSV，并取得参与者同意。该短问卷不是完整 HuCAS 量表。</p></form></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-main"><div><div class="footer-brand">知路<span> / CQU WAYFINDER</span></div><p>一个面向重庆大学的空间智能与无障碍交互课程原型。</p></div><div class="footer-links"><a href="#workspace">路线体验</a><a href="#research">用户测试</a><a href="https://www.cqu.edu.cn/" target="_blank" rel="noopener noreferrer">重庆大学官网 ↗</a></div></div><div class="shell footer-bottom"><span>COURSE PROTOTYPE · 2026</span><span>本项目为学生课程设计，并非重庆大学官方导航服务。</span></div></footer>
+</body>
+</html>
